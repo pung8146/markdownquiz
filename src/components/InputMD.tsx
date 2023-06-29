@@ -19,22 +19,28 @@ export default function InputMD() {
     setInput("");
   };
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setInput(event.target.value);
   };
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input
+        <textarea
           value={input}
           onChange={handleChange}
           placeholder="MD형식의 문서를 붙여 넣어주세요"
+          rows={10}
+          cols={50}
         />
         <button type="submit">변환하기</button>
         <button type="reset">취소하기</button>
       </form>
-      <ReactMarkdown>{markdown}</ReactMarkdown>
+      <div style={{ textAlign: "left" }}>
+        {" "}
+        {/* 추가된 스타일 */}
+        <ReactMarkdown>{markdown}</ReactMarkdown>
+      </div>
     </div>
   );
 }
