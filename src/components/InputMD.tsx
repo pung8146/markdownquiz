@@ -5,7 +5,8 @@ import styled from "styled-components";
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  margin-bottom: 2em;
+  width: 80%;
+  margin: 0 auto;
 `;
 
 const TextArea = styled.textarea`
@@ -45,6 +46,7 @@ const ResetButton = styled(Button)`
 `;
 
 const MarkdownWrapper = styled.div`
+  margin: 0 auto;
   max-width: 800px;
   padding: 1em;
   background-color: white;
