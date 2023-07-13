@@ -66,6 +66,7 @@ export default function InputMD() {
     const savedMarkdown = localStorage.getItem("markdown");
     if (savedMarkdown) {
       setMarkdown(savedMarkdown);
+      console.log("Markdown Content: ", savedMarkdown); // 이 줄 추가
     }
   }, []);
 
